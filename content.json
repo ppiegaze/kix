@@ -1,0 +1,187 @@
+{
+    "items": [
+        {
+            "system": {
+                "id": "4d4dc14d-8c7c-471f-b797-c6694c604964",
+                "name": "About us",
+                "codename": "about_us",
+                "language": "en-US",
+                "type": "article",
+                "collection": "default",
+                "last_modified": "2020-02-17T07:22:51.6711216Z",
+                "workflow_step": "published"
+            },
+            "elements": {
+                "title": {
+                    "type": "text",
+                    "name": "Title",
+                    "value": "Great news about us"
+                },
+                "body_copy": {
+                    "type": "rich_text",
+                    "name": "Body",
+                    "modular_content": "n43768251_0eaa_01f6_69c2_f93047f076e1",
+                    "value": "<h1>HTML Ipsum Presents</h1><p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href='#'>Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p><h2>Header Level 2</h2><ol><li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li><li>Aliquam tincidunt mauris eu risus.</li></ol><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote><h3>Header Level 3</h3><ul><li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li><li>Aliquam tincidunt mauris eu risus.</li></ul>"
+                },
+                "related_articles": {
+                    "type": "modular_content",
+                    "name": "Related articles",
+                    "value": "my_article"
+                },
+                "author": {
+                    "type": "modular_content",
+                    "name": "Author",
+                    "value": "jenny_brown"
+                },
+                "url": {
+                    "type": "url_slug",
+                    "name": "URL pattern",
+                    "value": "great-news-about-us"
+                }
+            }
+        },
+        {
+            "system": {
+                "id": "0afdd600-d6c5-4ac4-bb6b-d2847ca779fe",
+                "name": "About us",
+                "codename": "about_us_0afdd60",
+                "language": "en-US",
+                "type": "navigation_item",
+                "collection": "default",
+                "last_modified": "2020-02-04T15:14:48.0057835Z",
+                "workflow_step": "published"
+            },
+            "elements": {
+                "title": {
+                    "type": "text",
+                    "name": "Title",
+                    "value": "About us"
+                },
+                "url": {
+                    "type": "url_slug",
+                    "name": "URL",
+                    "value": "about-us"
+                },
+                "subitems": {
+                    "type": "modular_content",
+                    "name": "Subitems",
+                    "value": "about_us"
+
+                }
+            }
+        }
+    ],
+    "modular_content": {
+        "about_us": {
+            "system": {
+                "id": "4d4dc14d-8c7c-471f-b797-c6694c604964",
+                "name": "About us",
+                "codename": "about_us",
+                "language": "en-US",
+                "type": "article",
+                "collection": "default",
+                "last_modified": "2020-02-17T07:22:51.6711216Z",
+                "workflow_step": "published"
+            },
+            "elements": {
+                "title": {
+                    "type": "text",
+                    "name": "Title",
+                    "value": "Great news about us"
+                },
+                "body_copy": {
+                    "type": "rich_text",
+                    "name": "Body",
+                    "modular_content": "n43768251_0eaa_01f6_69c2_f93047f076e1",
+                    "value": "<object type=\"application/kenticocloud\" data-type=\"item\" data-rel=\"component\" data-codename=\"n43768251_0eaa_01f6_69c2_f93047f076e1\"></object>"
+                },
+                "related_articles": {
+                    "type": "modular_content",
+                    "name": "Related articles",
+                    "value": "my_article"
+                },
+                "author": {
+                    "type": "modular_content",
+                    "name": "Author",
+                    "value": "jenny_brown"
+                },
+                "url": {
+                    "type": "url_slug",
+                    "name": "URL pattern",
+                    "value": "great-news-about-us"
+                }
+            }
+        },
+        "jenny_brown": {
+            "system": {
+                "id": "59838cfd-ba15-4607-8e6a-d91931fc7ce6",
+                "name": "Jenny Brown",
+                "codename": "jenny_brown",
+                "language": "en-US",
+                "type": "author",
+                "collection": "default",
+                "last_modified": "2020-02-05T11:33:54.5271987Z",
+                "workflow_step": "published"
+            },
+            "elements": {
+                "name": {
+                    "type": "text",
+                    "name": "Name",
+                    "value": "Jenny Brown"
+                },
+                "bio": {
+                    "type": "rich_text",
+                    "name": "Bio",
+                    "modular_content": "",
+                    "value": "<p>Jenny is here for all things wildlife and, newly, climate changes. Check her out.</p>"
+                }
+            }
+        },
+        "my_article": {
+            "system": {
+                "id": "29b82988-fb9e-4327-a34b-b568cfaa39e9",
+                "name": "My article",
+                "codename": "my_article",
+                "language": "en-US",
+                "type": "article",
+                "collection": "default",
+                "last_modified": "2020-02-03T13:58:21.5779868Z",
+                "workflow_step": "published"
+            },
+            "elements": {
+                "title": {
+                    "type": "text",
+                    "name": "Title",
+                    "value": "My article"
+                },
+                "body_copy": {
+                    "type": "rich_text",
+                    "name": "Body",
+                    "modular_content": "",
+                    "value": "<p>Lorem ipsum dolor sit amet.</p>"
+                },
+                "related_articles": {
+                    "type": "modular_content",
+                    "name": "Related articles",
+                    "value": "about_us"
+                },
+                "author": {
+                    "type": "modular_content",
+                    "name": "Author",
+                    "value": "jean_morris"
+                },
+                "url": {
+                    "type": "url_slug",
+                    "name": "URL pattern",
+                    "value": "my-article"
+                }
+            }
+        }
+    },
+    "pagination": {
+        "skip": 0,
+        "limit": 3,
+        "count": 3,
+        "next_page": "https://deliver.kontent.ai/8d20758c-d74c-4f59-ae04-ee928c0816b7/items/?limit=3&skip=3"
+    }
+}
