@@ -90,8 +90,7 @@ func convertArticle(item Item) error {
 	fmt.Fprintln(fo, "------------------")
 	fmt.Fprintln(fo, "")
 	fmt.Fprintln(fo, "# "+article.Title.Value)
-    fmt.Fprintln(fo, markdown)
-
+    fmt.Fprint(fo, markdown)
 	return nil
 }
 
