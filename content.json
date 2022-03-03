@@ -76,7 +76,7 @@
             "system": {
                 "id": "4d4dc14d-8c7c-471f-b797-c6694c604964",
                 "name": "About us",
-                "codename": "about_us_modular_content",
+                "codename": "about_us",
                 "language": "en-US",
                 "type": "article",
                 "collection": "default",

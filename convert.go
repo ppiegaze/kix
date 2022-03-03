@@ -5,8 +5,12 @@ import (
 	"os"
 
 	md "github.com/JohannesKaufmann/html-to-markdown"
-	// "github.com/davecgh/go-spew/spew"
 	"github.com/mitchellh/mapstructure"
+)
+
+const (
+	primaryContent = "primary"
+	modularContent = "modular"
 )
 
 // Convert map to Markdown
@@ -24,11 +28,11 @@ func convert(contentMap map[string]interface{}) error {
 	for _, item := range content.Items {
 		switch item.System.Type {
 		case "article":
-			convertArticle(item)
+			convertArticle(item, primaryContent)
 		case "navigation_item":
-			convertNavigationItem(item)
+			convertNavigationItem(item, primaryContent)
 		case "author":
-			convertAuthor(item)
+			convertAuthor(item, primaryContent)
 		}
 	}
 
@@ -46,17 +50,17 @@ func convert(contentMap map[string]interface{}) error {
 
 		switch item.System.Type {
 		case "article":
-			convertArticle(item)
+			convertArticle(item, modularContent)
 		case "navigation_item":
-			convertNavigationItem(item)
+			convertNavigationItem(item, modularContent)
 		case "author":
-			convertAuthor(item)
+			convertAuthor(item, modularContent)
 		}
 	}
 	return nil
 }
 
-func convertArticle(item Item) error {
+func convertArticle(item Item, contentType string) error {
 	// We know this Item contains an Article
 	var article Article
 	err := mapstructure.Decode(item.Elements, &article)
@@ -65,7 +69,7 @@ func convertArticle(item Item) error {
 	}
 
 	// Construct file name
-	var fn = outdir + "/" + item.System.CodeName + ".md"
+	var fn = outdir + "/" + item.System.CodeName + "-" + contentType + ".md"
 
 	// Open output file
 	fo, err := os.Create(fn)
@@ -94,7 +98,7 @@ func convertArticle(item Item) error {
 	return nil
 }
 
-func convertNavigationItem(item Item) error {
+func convertNavigationItem(item Item, contentType string) error {
 	// We know this Item contains a NavigationItem
 	var navigationItem NavigationItem
 	err := mapstructure.Decode(item.Elements, &navigationItem)
@@ -103,7 +107,7 @@ func convertNavigationItem(item Item) error {
 	}
 
 	// Construct file name
-	var fn = outdir + "/" + item.System.CodeName + ".md"
+	var fn = outdir + "/" + item.System.CodeName + "-" + contentType + ".md"
 
 	// Open output file
 	fo, err := os.Create(fn)
@@ -123,7 +127,7 @@ func convertNavigationItem(item Item) error {
 	return nil
 }
 
-func convertAuthor(item Item) error {
+func convertAuthor(item Item, contentType string) error {
 	// We know this Item contains an Author
 	var author Author
 	err := mapstructure.Decode(item.Elements, &author)
@@ -132,7 +136,7 @@ func convertAuthor(item Item) error {
 	}
 
 	// Construct file name
-	var fn = outdir + "/" + item.System.CodeName + ".md"
+	var fn = outdir + "/" + item.System.CodeName + "-" + contentType + ".md"
 
 	// Open output file
 	fo, err := os.Create(fn)
