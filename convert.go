@@ -5,8 +5,8 @@ import (
 	"os"
 
 	md "github.com/JohannesKaufmann/html-to-markdown"
-	"github.com/mitchellh/mapstructure"
 	// "github.com/davecgh/go-spew/spew"
+	"github.com/mitchellh/mapstructure"
 )
 
 // Convert map to Markdown
@@ -90,7 +90,8 @@ func convertArticle(item Item) error {
 	fmt.Fprintln(fo, "------------------")
 	fmt.Fprintln(fo, "")
 	fmt.Fprintln(fo, "# "+article.Title.Value)
-	fmt.Fprint(fo, markdown)
+    fmt.Fprintln(fo, markdown)
+
 	return nil
 }
 

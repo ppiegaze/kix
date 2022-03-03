@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"path/filepath"
 )
 
 const in = "content.json"
@@ -19,7 +20,8 @@ func main() {
 	}
 
 	// Create output directory
-	err = os.Mkdir("out", 0755)
+	outpath := filepath.Join(".", outdir)
+	err = os.MkdirAll(outpath, os.ModePerm)
 	if err != nil {
 		log.Fatal(err)
 	}
