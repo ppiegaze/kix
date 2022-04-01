@@ -4,7 +4,6 @@ go 1.17
 
 require (
 	github.com/JohannesKaufmann/html-to-markdown v1.3.3
-	github.com/davecgh/go-spew v1.1.1
 	github.com/mitchellh/mapstructure v1.4.3
 )
 
