@@ -26,11 +26,11 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// Convert JSON to a map[string]interface{} (map of string to "any").
+	// Convert JSON to a map[string]any (map of string to any).
 	// We use this approach instead of defining structs with custom field tags
 	// because the source JSON contains a mixture of known and unknown
 	// property names.
-	var content map[string]interface{}
+	var content map[string]any
 	err = json.Unmarshal(fi, &content)
 	if err != nil {
 		log.Fatal(err)

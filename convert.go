@@ -14,7 +14,7 @@ const (
 )
 
 // Convert map to Markdown
-func convert(contentMap map[string]interface{}) error {
+func convert(contentMap map[string]any) error {
 
 	// Decode the map into a Content struct
 	var content Content
@@ -36,8 +36,8 @@ func convert(contentMap map[string]interface{}) error {
 		}
 	}
 
-	// We know that the Content.ModuleContent is a map[string]interface{}
-	// Each value in that map is convertable to an Item
+	// We know that the Content.ModuleContent is a map[string]any
+	// Each value in that map is convertible to an Item
 	// We iterate and convert.
 	// Depending on the Item type we handle the conversion differently
 	for _, m := range content.ModularContent {
@@ -94,7 +94,7 @@ func convertArticle(item Item, contentType string) error {
 	fmt.Fprintln(fo, "------------------")
 	fmt.Fprintln(fo, "")
 	fmt.Fprintln(fo, "# "+article.Title.Value)
-    fmt.Fprint(fo, markdown)
+	fmt.Fprint(fo, markdown)
 	return nil
 }
 

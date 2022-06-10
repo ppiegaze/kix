@@ -1,14 +1,14 @@
 package main
 
 type Content struct {
-	Items          []Item                 `mapstructure:"items"`
-	ModularContent map[string]interface{} `mapstructure:"modular_content"`
-	Pagination     `mapstructure:"modular_content"`
+	Items          []Item         `mapstructure:"items"`
+	ModularContent map[string]any `mapstructure:"modular_content"`
+	Pagination     Pagination     `mapstructure:"pagination"`
 }
 
 type Item struct {
-	System   `mapstructure:"system"`
-	Elements map[string]interface{} `mapstructure:"elements"`
+	System   System         `mapstructure:"system"`
+	Elements map[string]any `mapstructure:"elements"`
 }
 
 type Pagination struct {

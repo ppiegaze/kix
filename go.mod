@@ -1,6 +1,6 @@
 module github.com/ppiegaze/kix
 
-go 1.17
+go 1.18
 
 require (
 	github.com/JohannesKaufmann/html-to-markdown v1.3.3
